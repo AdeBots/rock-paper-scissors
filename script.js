@@ -13,4 +13,6 @@ function getComputerChoice (){
         console.log("scissors");
     }
 }
+let computerScore = getComputerChoice ();
+
 
