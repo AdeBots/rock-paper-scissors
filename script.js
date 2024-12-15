@@ -50,4 +50,24 @@ function playRound(){
         return "Tie";
     }
 }
-console.log(playRound());
+function playGame(){
+    for(let i = 0; i<= 5; i++){
+        playRound();
+        console.log(playRound());
+    }
+    console.log("Computer Score is " + computerScore + " and Human Score is " + humanScore);
+}
+function result(){
+    playGame();
+    if (computerScore < humanScore){
+        console.log ("You win");
+    }
+    else if (computerScore < humanScore){
+        console.log("You lose!");
+    }
+    else{
+        console.log("Tie");
+    }
+}
+
+result();
