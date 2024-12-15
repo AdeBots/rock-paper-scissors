@@ -24,30 +24,33 @@ function playRound(){
     const computerChoice = getComputerChoice();
     if (computerChoice === "rock" && humanChoice === "scissors"){
         computerScore++;
-        return "You lose! " + computerChoice + " beats " + humanChoice;
+        console.log ("You lose! " + computerChoice + " beats " + humanChoice);
     }
     else if (computerChoice === "paper" && humanChoice === "rock"){
         computerScore++;
-        return "You lose! " + computerChoice + " beats " + humanChoice;
+        console.log ("You lose! " + computerChoice + " beats " + humanChoice);
     }
     else if (computerChoice === "scissors" && humanChoice === "paper"){
         computerScore++;
-        return "You lose! " + computerChoice + " beats " + humanChoice;
+        console.log ("You lose! " + computerChoice + " beats " + humanChoice);
     }
     else if (computerChoice === "rock" && humanChoice === "paper"){
         humanScore++;
-        return "You win! " + humanChoice + " beats " + computerChoice;
+        console.log("You win! " + humanChoice + " beats " + computerChoice);
     }
     else if (computerChoice === "paper" && humanChoice === "scissors"){
         humanScore++;
-        return "You win! " + humanChoice + " beats " + computerChoice;
+        console.log("You win! " + humanChoice + " beats " + computerChoice);
     }
     else if (computerChoice === "scissors" && humanChoice === "rock"){
         humanScore++;
-        return "You win! " + humanChoice + " beats " + computerChoice;
+        console.log("You win! " + humanChoice + " beats " + computerChoice);
     }
     else if (computerChoice === humanChoice){
-        return "Tie";
+        console.log("Tie");
+    }
+    else{
+        console.log("wrong answer");
     }
 }
 function playGame(){
