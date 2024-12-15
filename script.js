@@ -24,21 +24,27 @@ function playRound(){
     const computerChoice = getComputerChoice();
     if (computerChoice === "rock" && humanChoice === "scissors"){
         return "You lose! " + computerChoice + " beats " + humanChoice;
+        computerScore++;
     }
     else if (computerChoice === "paper" && humanChoice === "rock"){
         return "You lose! " + computerChoice + " beats " + humanChoice;
+        computerScore++;
     }
     else if (computerChoice === "scissors" && humanChoice === "paper"){
         return "You lose! " + computerChoice + " beats " + humanChoice;
+        computerScore++;
     }
     else if (computerChoice === "rock" && humanChoice === "paper"){
         return "You win! " + humanChoice + " beats " + computerChoice;
+        humanScore++;
     }
     else if (computerChoice === "paper" && humanChoice === "scissors"){
         return "You win! " + humanChoice + " beats " + computerChoice;
+        humanScore++;
     }
     else if (computerChoice === "scissors" && humanChoice === "rock"){
         return "You win! " + humanChoice + " beats " + computerChoice;
+        humanScore++;
     }
     else if (computerChoice === humanChoice){
         return "Tie";
