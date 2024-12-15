@@ -17,5 +17,5 @@ let computerScore = getComputerChoice ();
 function getHumanChoice(){
     console.log(prompt("Rock, paper, scissors?"));
 }
-
+let humanScore = getHumanChoice ();
 
