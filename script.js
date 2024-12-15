@@ -56,16 +56,15 @@ function playRound(){
 function playGame(){
     for(let i = 1; i<= 5; i++){
         playRound();
-        console.log(playRound());
     }
-    console.log("Computer Score is " + computerScore + " and Human Score is " + humanScore);
+    console.log("Your Score is " + humanScore + " and Computer Score is " + computerScore);
 }
 function result(){
     playGame();
     if (computerScore < humanScore){
-        console.log ("You win");
+        console.log ("You win!");
     }
-    else if (computerScore < humanScore){
+    else if (computerScore > humanScore){
         console.log("You lose!");
     }
     else{
