@@ -3,19 +3,25 @@ function random(num1, num2){
 }
 function getComputerChoice (){
     let compChoice = random(0,3);
+    let computerChoice;
     if(compChoice === 1){
-        console.log("rock");
+        computerChoice = "rock";
     }
     else if(compChoice === 2){
-       console.log("paper");
+       computerChoice = "paper";
     }
     else{
-        console.log("scissors");
+        computerChoice = "scissors";
     }
+    return computerChoice;
 }
-let computerScore = getComputerChoice ();
+getComputerChoice ();
 function getHumanChoice(){
-    console.log(prompt("Rock, paper, scissors?"));
+    let humanChoice;
+    humanChoice = prompt("Rock, paper, scissors?");
+    return humanChoice
 }
-let humanScore = getHumanChoice ();
+getHumanChoice ();
+let computerScore = 0;
+let humanScore = 0;
 
