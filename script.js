@@ -20,7 +20,7 @@ function getHumanChoice(){
 let humanScore = 0;
 let computerScore = 0;
 function playRound(){
-    const humanChoice = getHumanChoice();
+    const humanChoice = getHumanChoice().toLowerCase();
     const computerChoice = getComputerChoice();
     if (computerChoice === "rock" && humanChoice === "scissors"){
         return "You lose! " + computerChoice + " beats " + humanChoice;
