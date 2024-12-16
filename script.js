@@ -57,8 +57,6 @@ function playRound(humanChoice, computerChoice){
         result.innerHTML= 
         "<h1> Invalid answer </h1>";;
     }
-    console.log(computerScore);
-    console.log(humanScore);
 }
 const rock = document.querySelector("#rock");
 const paper = document.querySelector("#paper");
