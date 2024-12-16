@@ -14,34 +14,11 @@ function getComputerChoice(){
         return "scissors";
     }
 }
-function chooseRock(){
-    return "rock";
-}
-function choosePaper(){
-    return "paper";
-}
-function chooseScissors(){
-    return "scissors";
-}
-/*
-const btn = document.querySelectorAll("button");
-btn.forEach ((button) => {
-button.addEventListener("click", playRound);
-});
-*/ 
-const rock = document.querySelector("#rock");
-const paper = document.querySelector("#paper");
-const scissors = document.querySelector("#scissors");
-function getHumanChoice() {
-    rock.addEventListener("click", chooseRock);
-    paper.addEventListener("click",choosePaper);
-    scissors.addEventListener("click",chooseScissors);
-}
+
 let humanScore = 0;
 let computerScore = 0;
-function playRound(){
-    const humanChoice = getHumanChoice();
-    const computerChoice = getComputerChoice();
+
+function playRound(humanChoice, computerChoice){
     if (computerChoice === "rock" && humanChoice === "scissors"){
         computerScore++;
         console.log ("You lose! " + computerChoice + " beats " + humanChoice);
@@ -70,10 +47,23 @@ function playRound(){
         console.log("Tie");
     }
     else{
-        console.log("wrong answer");
+        console.log("invalid answer");
     }
 }
-playRound();
+const rock = document.querySelector("#rock");
+const paper = document.querySelector("#paper");
+const scissors = document.querySelector("#scissors");9
+rock.addEventListener("click", () => { 
+    playRound("rock",getComputerChoice())
+})
+paper.addEventListener("click", () => {
+    playRound("paper",getComputerChoice())
+});
+scissors.addEventListener("click", () => {
+    playRound("scissors",getComputerChoice())
+});
+// playRound();
+
 
 /*function playGame(){
     for(let i = 1; i<= 5; i++){
