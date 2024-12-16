@@ -53,14 +53,15 @@ function playRound(){
         console.log("wrong answer");
     }
 }
-function playGame(){
+/*function playGame(){
     for(let i = 1; i<= 5; i++){
         playRound();
     }
     console.log("Your Score is " + humanScore + " and Computer Score is " + computerScore);
-}
+}*/
 function result(){
-    playGame();
+    /*playGame();*/
+    playRound();
     if (computerScore < humanScore){
         console.log ("You win!");
     }
