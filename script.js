@@ -17,37 +17,45 @@ function getComputerChoice(){
 
 let humanScore = 0;
 let computerScore = 0;
-
+const result = document.querySelector("#results");
 function playRound(humanChoice, computerChoice){
     if (computerChoice === "rock" && humanChoice === "scissors"){
         computerScore++;
-        console.log ("You lose! " + computerChoice + " beats " + humanChoice);
+        result.innerHTML= 
+        "<h1> You lose! " + computerChoice + " beats " + humanChoice + "</h1>";
     }
     else if (computerChoice === "paper" && humanChoice === "rock"){
         computerScore++;
-        console.log ("You lose! " + computerChoice + " beats " + humanChoice);
+        result.innerHTML= 
+        "<h1> You lose! " + computerChoice + " beats " + humanChoice + "</h1>";
     }
     else if (computerChoice === "scissors" && humanChoice === "paper"){
         computerScore++;
-        console.log ("You lose! " + computerChoice + " beats " + humanChoice);
+        result.innerHTML= 
+        "<h1> You lose! " + computerChoice + " beats " + humanChoice + "</h1>";
     }
     else if (computerChoice === "rock" && humanChoice === "paper"){
         humanScore++;
-        console.log("You win! " + humanChoice + " beats " + computerChoice);
+        result.innerHTML= 
+        "<h1> You win! " + humanChoice + " beats " + computerChoice + "</h1>";
     }
     else if (computerChoice === "paper" && humanChoice === "scissors"){
         humanScore++;
-        console.log("You win! " + humanChoice + " beats " + computerChoice);
+        result.innerHTML= 
+        "<h1> You win! " + humanChoice + " beats " + computerChoice + "</h1>";
     }
     else if (computerChoice === "scissors" && humanChoice === "rock"){
         humanScore++;
-        console.log("You win! " + humanChoice + " beats " + computerChoice);
+        result.innerHTML= 
+        "<h1> You win! " + humanChoice + " beats " + computerChoice + "</h1>";
     }
     else if (computerChoice === humanChoice){
-        console.log("Tie");
+        result.innerHTML= 
+        "<h1> Tie </h1>";
     }
     else{
-        console.log("invalid answer");
+        result.innerHTML= 
+        "<h1> Invalid answer </h1>";;
     }
 }
 const rock = document.querySelector("#rock");
@@ -62,7 +70,7 @@ paper.addEventListener("click", () => {
 scissors.addEventListener("click", () => {
     playRound("scissors",getComputerChoice())
 });
-// playRound();
+
 
 
 /*function playGame(){
