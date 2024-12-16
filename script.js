@@ -14,13 +14,33 @@ function getComputerChoice(){
         return "scissors";
     }
 }
-function getHumanChoice(){
-    return prompt("Rock, paper, scissors?");
+function chooseRock(){
+    return "rock";
+}
+function choosePaper(){
+    return "paper";
+}
+function chooseScissors(){
+    return "scissors";
+}
+/*
+const btn = document.querySelectorAll("button");
+btn.forEach ((button) => {
+button.addEventListener("click", playRound);
+});
+*/ 
+const rock = document.querySelector("#rock");
+const paper = document.querySelector("#paper");
+const scissors = document.querySelector("#scissors");
+function getHumanChoice() {
+    rock.addEventListener("click", chooseRock);
+    paper.addEventListener("click",choosePaper);
+    scissors.addEventListener("click",chooseScissors);
 }
 let humanScore = 0;
 let computerScore = 0;
 function playRound(){
-    const humanChoice = getHumanChoice().toLowerCase();
+    const humanChoice = getHumanChoice();
     const computerChoice = getComputerChoice();
     if (computerChoice === "rock" && humanChoice === "scissors"){
         computerScore++;
@@ -53,23 +73,23 @@ function playRound(){
         console.log("wrong answer");
     }
 }
+playRound();
+
 /*function playGame(){
     for(let i = 1; i<= 5; i++){
         playRound();
     }
     console.log("Your Score is " + humanScore + " and Computer Score is " + computerScore);
-}*/
+}
 function result(){
-    /*playGame();*/
-    playRound();
+    playGame();
     if (computerScore < humanScore){
         console.log ("You win!");
     }
     else if (computerScore > humanScore){
         console.log("You lose!");
     }
-    else{
+    else {
         console.log("Tie");
     }
-}
-result();
+}*/
