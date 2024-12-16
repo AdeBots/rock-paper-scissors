@@ -57,37 +57,57 @@ function playRound(humanChoice, computerChoice){
         result.innerHTML= 
         "<h1> Invalid answer </h1>";;
     }
+    console.log(computerScore);
+    console.log(humanScore);
 }
 const rock = document.querySelector("#rock");
 const paper = document.querySelector("#paper");
-const scissors = document.querySelector("#scissors");9
+const scissors = document.querySelector("#scissors");
+
 rock.addEventListener("click", () => { 
-    playRound("rock",getComputerChoice())
+    playRound("rock",getComputerChoice());
 })
+
 paper.addEventListener("click", () => {
-    playRound("paper",getComputerChoice())
+    playRound("paper",getComputerChoice());
 });
+
 scissors.addEventListener("click", () => {
-    playRound("scissors",getComputerChoice())
+    playRound("scissors",getComputerChoice());
+});
+
+const btn = document.querySelectorAll("button");
+const compScore = document.querySelector("#computerScore");
+const playScore = document.querySelector("#playerScore");
+const current =document.querySelector("#current")
+const finalScore = document.querySelector("#finalScore");
+
+btn.forEach((button) => {
+    button.addEventListener("click", () =>{
+        compScore.innerHTML = "<h2> Computer Score: <br>" + computerScore + "</h2>";
+        playScore.innerHTML = "<h2> Your Score: <br>" + humanScore + "</h2>";
+        if(computerScore == 5 || humanScore == 5){
+            current.innerHTML = "<h1>Game Over!</h1>"
+            if (computerScore < humanScore){
+                finalScore.innerHTML = "<h1>You win!</h1>";
+            }
+            else if (computerScore > humanScore){
+                finalScore.innerHTML = "<h1>You lose!</h1>";
+            }
+            else if (computerScore = humanScore){
+                finalScore.innerHTML = "<h1>It's a Tie</h1>";
+            }
+        }
+        else{
+            current.innerHTML = "<h1>Next Round</h1>";
+        }
+        
+    });
 });
 
 
+// compScore.innerHTML = "<h2> Computer Score: <br>" + computerScore + "</h2>";
+// playScore.innerHTML = "<h2> Your Score: <br>" + humanScore + "</h2>";
+// // function displayFinalresult(){
+//     playGame();
 
-/*function playGame(){
-    for(let i = 1; i<= 5; i++){
-        playRound();
-    }
-    console.log("Your Score is " + humanScore + " and Computer Score is " + computerScore);
-}
-function result(){
-    playGame();
-    if (computerScore < humanScore){
-        console.log ("You win!");
-    }
-    else if (computerScore > humanScore){
-        console.log("You lose!");
-    }
-    else {
-        console.log("Tie");
-    }
-}*/
